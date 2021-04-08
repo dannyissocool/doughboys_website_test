@@ -2,6 +2,11 @@ const boxes = document.querySelectorAll('.box');
 const nav = document.getElementById('nav')
 const title = document.querySelector('#zoomcard h1')
 const heroImg = document.querySelector('#zoomcard img')
+const imgContainer = document.querySelector('#imgs')
+const imgArray = imgContainer.querySelectorAll('img')
+const leftBtn = document.querySelector('#left')
+const rightBtn = document.querySelector('#right')
+
 
 //Movement Animation to happen
 const card = document.querySelector("#zoomcard");
@@ -65,3 +70,44 @@ function checkBoxes(){
     }
   })
 }
+
+
+
+// Image Slideshow
+
+let index = 0;
+
+let interval = setInterval(run, 2000) // runs every 2 seconds
+
+function run () {
+  index++
+  changePic()
+}
+
+
+function changePic() {
+  if (index > imgArray.length - 1){
+    index = 0
+  } else if (index < 0) {
+    index = imgArray.length -1;
+  }
+
+  imgContainer.style.transform = `translateX(${-index * 500}px)`
+}
+
+function resetInterval() {
+  clearInterval(interval)
+  interval = setInterval(run, 2000);
+}
+
+rightBtn.addEventListener('click', () => {
+  index++
+  changePic()
+  resetInterval()
+})
+
+leftBtn.addEventListener('click', () => {
+  index--
+  changePic()
+  resetInterval()
+})

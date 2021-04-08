@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Insaniburger';
+    src: url('Insaniburger.eot');
+    src: url('Insaniburger.eot?#iefix') format('embedded-opentype'),
+        url('Insaniburger.woff2') format('woff2'),
+        url('Insaniburger.woff') format('woff'),
+        url('Insaniburger.ttf') format('truetype'),
+        url('Insaniburger.svg#Insaniburger') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

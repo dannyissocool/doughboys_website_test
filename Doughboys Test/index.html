@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> 
     <link rel="stylesheet" href="css/style.css">
     <title>Doughboys Podcast</title>
 </head>
@@ -15,9 +16,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Episodes</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -45,7 +46,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id='about'>
         <div class="container box">
             <img src="img/wiger_about.jpg" alt="wiger walking on sidewalk">
             <div class="about-text">
@@ -63,9 +64,43 @@
         </div>
     </section>
 
-    <section class="episodes">
+    
+    <section class="gallery" id='gallery'>
 
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+                <img src="/img/slide1.jpg" alt="First Image">
+
+                <img src="/img/slide2.jpg" alt="Second Image">
+
+                <img src="/img/slide3.jpg" alt="Third Image">
+
+                <img src="img/slide4.jpg" alt="Fourth Image">
+
+                <img src="img/slide5.jpg" alt="Fifth Image">
+
+                <img src="img/slide6.jpg" alt="Sixth Image">
+            </div>
+
+            <div class="buttons-container">
+                <button id="left" class='btn'>Prev</button>
+                <button id="right" class='btn'>Next</button>
+            </div>
+
+        </div>
     </section>
+
+    <section class="contact" id="contact">
+        <div class="card">
+            <h1>Wanna Roast the Spoonman? Submit your roast here to send to roastspoonman@gmail.com</h1>
+            <input type="text" name="" id="">
+            <h1>Got a fresh drop for the Spoonman? Submit here to send to spoonmandrops@gmail.com</h1>
+            <input type="text" name="" id="">
+
+        </div>
+    </section>
+  
+
 
 
     <script src="app.js"></script>
