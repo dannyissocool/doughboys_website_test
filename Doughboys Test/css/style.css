@@ -100,7 +100,7 @@ nav.active .nav-container ul a:hover {
 .nav-container .logo a {
   text-decoration: none;
   padding: 10px 20px;
-  color: black;
+  color: #551a8b;
   font-weight: bold;
   font-size: larger;
   letter-spacing: 1.4px;
@@ -132,7 +132,7 @@ nav.active .nav-container ul a:hover {
   text-decoration: none;
   margin: 0 10px;
   padding: 10px 20px;
-  color: black;
+  color: #551a8b;
   font-size: larger;
 }
 
@@ -151,7 +151,6 @@ nav.active .nav-container ul a:hover {
 }
 
 .zoomcontainer .card {
-  margin: 0 auto;
   z-index: 1;
 }
 
@@ -160,12 +159,13 @@ nav.active .nav-container ul a:hover {
 }
 
 .zoomcontainer .card img {
-  margin: 0 auto;
+  margin: 20px auto 0;
   z-index: 2;
   max-width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  display: block;
 }
 
 .hero-container {
@@ -223,8 +223,7 @@ nav.active .nav-container ul a:hover {
 .hero-container .host-headshots .card {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  margin: 20px 10px;
-  padding: 3px;
+  margin: 10px;
 }
 
 .hero-container .host-headshots img {
@@ -242,6 +241,19 @@ section .about {
 
 .about {
   margin: 100px 20px;
+}
+
+.about .title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.about .title p {
+  margin: 30px;
+  font-size: larger;
 }
 
 .about .container {
@@ -282,6 +294,7 @@ section .about {
 .gallery {
   border-top: 2px solid #f4be40;
   height: 100vh;
+  position: relative;
 }
 
 .gallery img {
@@ -297,7 +310,9 @@ section .about {
   height: 540px;
   width: 500px;
   overflow: hidden;
-  margin: 40% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -355,13 +370,18 @@ section .about {
 .contact {
   border-top: 2px solid #f4be40;
   height: 100vh;
+  position: relative;
 }
 
 .contact .card {
   max-width: 1000px;
-  margin: 30% auto;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .contact .card h1 {
@@ -374,6 +394,38 @@ section .about {
   margin: 20px 0;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+
+.footer {
+  background-color: #f4be40;
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.footer ul li {
+  list-style-type: none;
+  padding: 1rem 2rem;
+}
+
+.footer ul li a {
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: white;
 }
 
 @media screen and (max-width: 700px) {
@@ -456,6 +508,12 @@ section .about {
   .container:nth-child(2) {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .footer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
