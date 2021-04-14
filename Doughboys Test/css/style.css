@@ -140,6 +140,38 @@ nav.active .nav-container ul a:hover {
   color: white;
 }
 
+.toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.toTopBtn i {
+  font-size: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.toTopBtn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.toTopBtn:focus {
+  -webkit-box-shadow: 0 0 3pt 2pt #0166ff;
+          box-shadow: 0 0 3pt 2pt #0166ff;
+  outline: none;
+}
+
 .hero {
   margin-top: 65px;
   border-bottom: 2px solid #f4be40;
@@ -298,8 +330,8 @@ section .about {
 }
 
 .gallery img {
-  width: 500px;
-  height: 500px;
+  max-width: 500px;
+  max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -307,8 +339,8 @@ section .about {
 .gallery .carousel {
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  height: 540px;
-  width: 500px;
+  max-height: 540px;
+  max-width: 500px;
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -327,13 +359,6 @@ section .about {
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-
-.gallery img {
-  width: 500px;
-  height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .gallery .buttons-container {
@@ -355,8 +380,8 @@ section .about {
   margin-top: 5px;
   border: 1px solid #0166ff;
   outline: 1px solid white;
-  -webkit-transition: outline-offset .1s ease;
-  transition: outline-offset .1s ease;
+  -webkit-transition: outline-offset 0.1s ease;
+  transition: outline-offset 0.1s ease;
 }
 
 .gallery .btn:hover {
@@ -460,6 +485,9 @@ section .about {
   }
   .nav-container ul li a:hover {
     color: black;
+  }
+  .toTopBtn {
+    display: block;
   }
   .hero {
     margin-top: 240px;
